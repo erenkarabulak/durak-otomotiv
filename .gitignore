@@ -1,0 +1,12 @@
+# Internal working notes (not part of the website)
+CALISMA-NOTLARI.md
+
+# Local dev tooling (preview server config)
+.claude/
+
+# OS / editor junk
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*~
