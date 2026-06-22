@@ -594,7 +594,7 @@
 
     .hero-copy .lead {
       color: var(--mute);
-      max-width: 440px;
+      max-width: 640px;
       margin-top: 24px;
       font-size: 16px;
       line-height: 1.75;
@@ -644,7 +644,7 @@
 
     .hero-visual-card {
       width: 100%;
-      max-width: 440px;
+      max-width: 650px;
       background: var(--white);
       border: 1px solid var(--mid);
       border-radius: var(--r-lg);
@@ -652,17 +652,6 @@
       backdrop-filter: blur(12px);
       position: relative;
       box-shadow: var(--shadow-md);
-    }
-
-    .hero-visual-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--red), transparent);
-      border-radius: var(--r-lg) var(--r-lg) 0 0;
     }
 
     .brand-stack {
@@ -735,6 +724,19 @@
       background: rgba(149, 0, 30, .15);
       color: var(--red);
       border: 1px solid rgba(149, 0, 30, .25);
+    }
+
+    .hero-card-photo {
+      aspect-ratio: 16/9;
+      margin: -32px -32px 0;
+      border-radius: var(--r-lg) var(--r-lg) 0 0;
+      overflow: hidden;
+    }
+
+    .hero-card-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .hero-card-footer {
@@ -966,6 +968,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .about-image-bg {
@@ -1255,6 +1263,48 @@
       justify-content: center;
       position: relative;
       overflow: hidden;
+    }
+
+    .ref-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s;
+    }
+
+    .ref-card:hover .ref-thumb img {
+      transform: scale(1.05);
+    }
+
+    /* ── GALERİ ──────────────────────────────────────────── */
+    .gallery {
+      background: var(--white);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .gallery-item {
+      margin: 0;
+      aspect-ratio: 4/3;
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      border: 1px solid var(--mid);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
     }
 
     .ref-thumb-pattern {
@@ -2096,6 +2146,7 @@
         <li><a href="#hakkimizda">Hakkımızda</a></li>
         <li><a href="#hizmetler">Hizmetler</a></li>
         <li><a href="#referanslar">Referanslar</a></li>
+        <li><a href="#galeri">Galeri</a></li>
         <li><a href="#yorumlar">Yorumlar</a></li>
         <li><a href="#iletisim">İletişim</a></li>
         <li><a href="#randevu" class="nav-cta">Randevu Al</a></li>
@@ -2109,6 +2160,7 @@
         <a href="#hakkimizda" role="menuitem">Hakkımızda</a>
         <a href="#hizmetler" role="menuitem">Hizmetler</a>
         <a href="#referanslar" role="menuitem">Referanslar</a>
+        <a href="#galeri" role="menuitem">Galeri</a>
         <a href="#yorumlar" role="menuitem">Yorumlar</a>
         <a href="#randevu" role="menuitem">Randevu Al</a>
         <a href="#iletisim" role="menuitem">İletişim</a>
@@ -2124,7 +2176,7 @@
       <div class="hero-grid">
         <div class="hero-copy reveal">
           <span class="eyebrow">KIA &amp; Hyundai Özel Servis</span>
-          <h1>KIA &amp; Hyundai Servis<br>Kartal'da<br><em>Doğru Ellerde.</em></h1>
+          <h1>KIA &amp; Hyundai Servis<br><em>Doğru Ellerde.</em></h1>
           <p class="lead">Yetkili servis standartlarında, bağımsız servis özgürlüğüyle. KIA ve Hyundai araçlarınız için
             uzman ekibimiz ve orijinal yedek parça garantisiyle yanınızdayız.</p>
           <div class="hero-actions">
@@ -2165,35 +2217,9 @@
           </div>
 
           <div class="hero-visual-card reveal">
-            <div class="brand-stack">
-              <div class="brand-row">
-                <div class="brand-logo-box">
-                  <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="22" cy="22" rx="20" ry="11" stroke="white" stroke-width="1.5" fill="none" />
-                    <text x="22" y="27" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="12"
-                      font-weight="900" fill="white" letter-spacing="2">KIA</text>
-                  </svg>
-                </div>
-                <div class="brand-row-info">
-                  <div class="brand-row-name">KIA</div>
-                  <div class="brand-row-desc">Tüm modeller desteklenir</div>
-                </div>
-                <div class="brand-row-badge">Uzman</div>
-              </div>
-              <div class="brand-row">
-                <div class="brand-logo-box">
-                  <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="22" cy="22" rx="20" ry="11" stroke="white" stroke-width="1.5" fill="none" />
-                    <text x="22" y="27" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="13"
-                      font-weight="900" fill="white" letter-spacing="1">H</text>
-                  </svg>
-                </div>
-                <div class="brand-row-info">
-                  <div class="brand-row-name">Hyundai</div>
-                  <div class="brand-row-desc">Tüm modeller desteklenir</div>
-                </div>
-                <div class="brand-row-badge">Uzman</div>
-              </div>
+            <div class="hero-card-photo">
+              <img src="gorseller/dukkan-cephe.webp"
+                alt="Durak Otomotiv dükkan dış cephe — KIA &amp; Hyundai özel servis tabelası, Kartal İstanbul" loading="eager" />
             </div>
             <div class="hero-card-footer">
               <div class="hero-card-stat">
@@ -2288,26 +2314,8 @@
 
         <div class="about-visual reveal">
           <div class="about-image">
-            <div class="about-image-bg"></div>
-            <div class="about-image-content">
-              <div class="garage-icon">
-                <svg viewBox="0 0 24 24">
-                  <path d="M3 17h3M12 3l-2 4h4l-2-4z" />
-                  <path d="M5 17l7-10 7 10" />
-                  <line x1="19" y1="17" x2="21" y2="17" />
-                  <rect x="4" y="17" width="16" height="4" rx="1" />
-                  <circle cx="8" cy="21" r="1" />
-                  <circle cx="16" cy="21" r="1" />
-                </svg>
-              </div>
-              <div>
-                <span class="about-tag">KIA Servisi</span>
-                <span class="about-tag">Hyundai Servisi</span>
-                <span class="about-tag">OBD Teşhis</span>
-                <span class="about-tag">EV Bakım</span>
-                <span class="about-tag">Orijinal Parça</span>
-              </div>
-            </div>
+            <img src="gorseller/servis-ici.webp"
+              alt="Durak Otomotiv servis içi — KIA araçlar lift üzerinde bakımda, Kartal İstanbul" loading="lazy" />
           </div>
           <div class="about-float-badge">
             <div class="about-float-icon">
@@ -2544,20 +2552,13 @@
 
         <div class="ref-card reveal">
           <div class="ref-thumb">
-            <div class="ref-thumb-pattern"></div>
-            <div class="ref-thumb-icon">
-              <svg viewBox="0 0 24 24">
-                <path d="M3 17h3M12 3l-2 4h4l-2-4z" />
-                <path d="M5 17l7-10 7 10" />
-                <line x1="19" y1="17" x2="21" y2="17" />
-              </svg>
-            </div>
+            <img src="gorseller/motor-revizyonu.webp" alt="KIA motor revizyonu — sökülmüş motor, Durak Otomotiv"
+              loading="lazy" />
             <span class="ref-thumb-label">KIA</span>
           </div>
           <div class="ref-body">
-            <h3>KIA Sportage — Motor Revizyonu</h3>
-            <p>2019 model Sportage 1.6 T-GDI motor revizyon ve yakıt sistemi temizliği. Tam performansına kavuşturuldu.
-            </p>
+            <h3>KIA — Motor Revizyonu</h3>
+            <p>Komple motor söküm, revizyon ve yakıt sistemi temizliği. Araç ilk günkü performansına kavuşturuldu.</p>
             <div class="ref-tag">
               <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" fill="none" stroke-width="2.5"
                 stroke-linecap="round" stroke-linejoin="round">
@@ -2570,18 +2571,13 @@
 
         <div class="ref-card reveal">
           <div class="ref-thumb">
-            <div class="ref-thumb-pattern"></div>
-            <div class="ref-thumb-icon">
-              <svg viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="8" />
-                <path d="M12 8v4M12 16h.01" />
-              </svg>
-            </div>
-            <span class="ref-thumb-label">Hyundai</span>
+            <img src="gorseller/eps-direksiyon-tamiri.webp" alt="KIA EPS elektrikli direksiyon kolonu tamiri — Durak Otomotiv"
+              loading="lazy" />
+            <span class="ref-thumb-label">KIA</span>
           </div>
           <div class="ref-body">
-            <h3>Hyundai Tucson — Fren Sistemi</h3>
-            <p>2021 Tucson ön ve arka fren balata+disk değişimi, ABS kalibrasyon güncellemesi tamamlandı.</p>
+            <h3>KIA — EPS Direksiyon Tamiri</h3>
+            <p>Elektrikli direksiyon (EPS) kolonu ve motorunun sökülerek arıza tespiti ve tamiri yapıldı.</p>
             <div class="ref-tag">
               <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" fill="none" stroke-width="2.5"
                 stroke-linecap="round" stroke-linejoin="round">
@@ -2594,18 +2590,13 @@
 
         <div class="ref-card reveal">
           <div class="ref-thumb">
-            <div class="ref-thumb-pattern"></div>
-            <div class="ref-thumb-icon">
-              <svg viewBox="0 0 24 24">
-                <path d="M13 2 L3 12 M21 12l-9 9M12 21l9-9" />
-                <path d="M21 3L13 11" />
-              </svg>
-            </div>
-            <span class="ref-thumb-label">KIA</span>
+            <img src="gorseller/sportage-kalorifer-petek.webp" alt="KIA Sportage kalorifer peteği değişimi — torpido söküm, Durak Otomotiv"
+              loading="lazy" />
+            <span class="ref-thumb-label">KIA Sportage</span>
           </div>
           <div class="ref-body">
-            <h3>KIA EV6 — Elektrik Teşhisi</h3>
-            <p>EV6 yüksek voltaj batarya teşhisi, termal yönetim sistemi bakımı ve yazılım güncellemesi yapıldı.</p>
+            <h3>KIA Sportage — Kalorifer Peteği</h3>
+            <p>Torpido söküm ile kalorifer (ısıtıcı) peteği değişimi. Isıtma sistemi yeniden tam verimle çalışır hale getirildi.</p>
             <div class="ref-tag">
               <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" fill="none" stroke-width="2.5"
                 stroke-linecap="round" stroke-linejoin="round">
@@ -2616,6 +2607,62 @@
           </div>
         </div>
 
+        <div class="ref-card reveal">
+          <div class="ref-thumb">
+            <img src="gorseller/sorento-on-diferansiyel.webp" alt="KIA Sorento ön diferansiyel ve hava körüğü değişimi — Durak Otomotiv"
+              loading="lazy" />
+            <span class="ref-thumb-label">KIA Sorento</span>
+          </div>
+          <div class="ref-body">
+            <h3>KIA Sorento — Ön Diferansiyel</h3>
+            <p>Ön diferansiyel bakımı ve hava körüğü (süspansiyon) değişimi başarıyla tamamlandı.</p>
+            <div class="ref-tag">
+              <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" fill="none" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              Tamamlandı
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERİ -->
+  <section id="galeri" class="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Galeri</span>
+        <h2>Servisimizden Kareler</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item reveal">
+          <img src="gorseller/servis-lift.webp"
+            alt="Araç lift üzerinde — Durak Otomotiv KIA Hyundai servisi" loading="lazy" />
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="gorseller/eps-kolonu.webp"
+            alt="EPS direksiyon kolonu ve motoru tezgahta — Durak Otomotiv" loading="lazy" />
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="gorseller/ic-mekan-torpido.webp"
+            alt="Araç iç mekan torpido söküm işlemi — Durak Otomotiv" loading="lazy" />
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="gorseller/kia-motor-bakim.webp"
+            alt="KIA motor bölmesi bakımı — kaput açık, Durak Otomotiv" loading="lazy" />
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="gorseller/triger-zinciri.webp"
+            alt="Motor triger zinciri (eksantrik) işlemi — Durak Otomotiv" loading="lazy" />
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="gorseller/arac-lift-2.webp"
+            alt="Araç lift üzerinde bakımda — Durak Otomotiv servisi" loading="lazy" />
+        </figure>
       </div>
     </div>
   </section>
